@@ -6,10 +6,12 @@
 
 #![forbid(unsafe_code)]
 
+pub mod descriptor;
 pub mod error;
 pub mod geom;
 pub mod pixel;
 
+pub use descriptor::{ImageDescriptor, MetadataBundle, MetadataSummary, SanitizePolicy};
 pub use error::{BudgetKind, FfpError, FfpResult, StatusCode};
 pub use geom::{Point, Rect, Size, TileGridIter, tile_grid};
 pub use pixel::{AlphaMode, ChannelLayout, Cicp, ColorSpace, Orientation, PixelFormat, SampleType};
