@@ -6,6 +6,10 @@
 
 #![forbid(unsafe_code)]
 
+pub mod error;
+
+pub use error::{BudgetKind, FfpError, FfpResult, StatusCode};
+
 /// Major version component of the `ffpix` engine.
 pub const FFPIX_VERSION_MAJOR: u32 = 0;
 
