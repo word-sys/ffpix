@@ -7,8 +7,10 @@
 #![forbid(unsafe_code)]
 
 pub mod error;
+pub mod geom;
 
 pub use error::{BudgetKind, FfpError, FfpResult, StatusCode};
+pub use geom::{Point, Rect, Size, TileGridIter, tile_grid};
 
 /// Major version component of the `ffpix` engine.
 pub const FFPIX_VERSION_MAJOR: u32 = 0;
