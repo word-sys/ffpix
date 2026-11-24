@@ -1,0 +1,13 @@
+[package]
+name = "ffpix-core"
+description = "Core pixel layouts, checked geometry, budget accounting, streaming I/O, and error types for ffpix"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+# Strictly zero third-party dependencies. Only Rust std is permitted.
+[dependencies]
+
+[lints]
+workspace = true

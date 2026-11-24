@@ -1,0 +1,33 @@
+# Cargo build outputs
+/target/
+**/*.rs.bk
+
+# Release and packaging outputs
+/dist/
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.wasm
+*.o
+*.obj
+*.pdb
+
+# Profiling and coverage artifacts
+*.profraw
+*.profdata
+*.gcda
+*.gcno
+lcov.info
+
+# Editor and OS files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+IDEA.md
+PLAN.md
