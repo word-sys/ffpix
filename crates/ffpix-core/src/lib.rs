@@ -8,9 +8,11 @@
 
 pub mod error;
 pub mod geom;
+pub mod pixel;
 
 pub use error::{BudgetKind, FfpError, FfpResult, StatusCode};
 pub use geom::{Point, Rect, Size, TileGridIter, tile_grid};
+pub use pixel::{AlphaMode, ChannelLayout, Cicp, ColorSpace, Orientation, PixelFormat, SampleType};
 
 /// Major version component of the `ffpix` engine.
 pub const FFPIX_VERSION_MAJOR: u32 = 0;
