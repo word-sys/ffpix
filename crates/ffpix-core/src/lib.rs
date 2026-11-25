@@ -14,6 +14,7 @@ pub mod geom;
 pub mod hash;
 pub mod io;
 pub mod pixel;
+pub mod synth;
 pub mod tile;
 
 pub use budget::{Budget, BudgetLimits, MemoryReservation};
@@ -30,6 +31,10 @@ pub use io::{
     SequentialSource, SliceSource, VecSink, WriterSink,
 };
 pub use pixel::{AlphaMode, ChannelLayout, Cicp, ColorSpace, Orientation, PixelFormat, SampleType};
+pub use synth::{
+    SynthPattern, TileDiff, compare_tiles_exact, compute_tile_psnr, eval_pattern_rgba8,
+    fill_tile_pattern, generate_tile, tile_sha256,
+};
 pub use tile::{TileBuffer, TilePool, TilePoolStats, TileView, TileViewMut};
 
 /// Major version component of the `ffpix` engine.
