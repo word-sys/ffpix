@@ -10,6 +10,7 @@ pub mod budget;
 pub mod descriptor;
 pub mod error;
 pub mod geom;
+pub mod hash;
 pub mod io;
 pub mod pixel;
 pub mod tile;
@@ -18,6 +19,7 @@ pub use budget::{Budget, BudgetLimits, MemoryReservation};
 pub use descriptor::{ImageDescriptor, MetadataBundle, MetadataSummary, SanitizePolicy};
 pub use error::{BudgetKind, FfpError, FfpResult, StatusCode};
 pub use geom::{Point, Rect, Size, TileGridIter, tile_grid};
+pub use hash::{Adler32, Crc32, Sha256};
 pub use io::{
     ByteSink, ByteSource, DEFAULT_MAX_LOOKAHEAD, FileSink, FileSource, PeekReader,
     SequentialSource, SliceSource, VecSink, WriterSink,
