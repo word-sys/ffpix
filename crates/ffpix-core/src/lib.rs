@@ -7,6 +7,7 @@
 #![forbid(unsafe_code)]
 
 pub mod budget;
+pub mod convert;
 pub mod descriptor;
 pub mod error;
 pub mod geom;
@@ -16,6 +17,10 @@ pub mod pixel;
 pub mod tile;
 
 pub use budget::{Budget, BudgetLimits, MemoryReservation};
+pub use convert::{
+    clamp_u8_i32, clamp_u16_i32, convert_row_format, div255_round, div65535_round, f32_to_u8,
+    f32_to_u16, u8_to_f32, u8_to_u16, u16_to_f32, u16_to_u8,
+};
 pub use descriptor::{ImageDescriptor, MetadataBundle, MetadataSummary, SanitizePolicy};
 pub use error::{BudgetKind, FfpError, FfpResult, StatusCode};
 pub use geom::{Point, Rect, Size, TileGridIter, tile_grid};
