@@ -6,11 +6,13 @@
 
 #![forbid(unsafe_code)]
 
+pub mod budget;
 pub mod descriptor;
 pub mod error;
 pub mod geom;
 pub mod pixel;
 
+pub use budget::{Budget, BudgetLimits, MemoryReservation};
 pub use descriptor::{ImageDescriptor, MetadataBundle, MetadataSummary, SanitizePolicy};
 pub use error::{BudgetKind, FfpError, FfpResult, StatusCode};
 pub use geom::{Point, Rect, Size, TileGridIter, tile_grid};
