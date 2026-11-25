@@ -11,12 +11,14 @@ pub mod descriptor;
 pub mod error;
 pub mod geom;
 pub mod pixel;
+pub mod tile;
 
 pub use budget::{Budget, BudgetLimits, MemoryReservation};
 pub use descriptor::{ImageDescriptor, MetadataBundle, MetadataSummary, SanitizePolicy};
 pub use error::{BudgetKind, FfpError, FfpResult, StatusCode};
 pub use geom::{Point, Rect, Size, TileGridIter, tile_grid};
 pub use pixel::{AlphaMode, ChannelLayout, Cicp, ColorSpace, Orientation, PixelFormat, SampleType};
+pub use tile::{TileBuffer, TilePool, TilePoolStats, TileView, TileViewMut};
 
 /// Major version component of the `ffpix` engine.
 pub const FFPIX_VERSION_MAJOR: u32 = 0;
