@@ -2,10 +2,12 @@
 
 #![forbid(unsafe_code)]
 
+pub mod eval;
 pub mod graph;
 pub mod op;
 pub mod validate;
 
+pub use eval::PullSession;
 pub use graph::{DEFAULT_MAX_NODES, DagBuilder, DagGraph, DagNode};
 pub use op::{
     AccessPattern, ErasedPullOp, ErasedState, EvalContext, NodeId, NoopPuller, OpKind, PullOp,
