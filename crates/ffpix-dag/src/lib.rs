@@ -6,6 +6,7 @@ pub mod cache;
 pub mod eval;
 pub mod graph;
 pub mod op;
+pub mod pool;
 pub mod strip_cache;
 pub mod validate;
 
@@ -16,5 +17,6 @@ pub use op::{
     AccessPattern, ErasedPullOp, ErasedState, EvalContext, NodeId, NoopPuller, OpKind, PullOp,
     PullOpAdapter, PullRequest, UpstreamPuller, erase_op,
 };
+pub use pool::{CancelToken, DEFAULT_QUEUE_MULTIPLIER, WorkerPool};
 pub use strip_cache::{SharedStripCache, StripCache, StripCacheStats};
 pub use validate::{ValidationReport, detect_cycles, validate_graph, validate_subgraph};
