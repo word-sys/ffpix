@@ -4,9 +4,11 @@
 
 pub mod graph;
 pub mod op;
+pub mod validate;
 
 pub use graph::{DEFAULT_MAX_NODES, DagBuilder, DagGraph, DagNode};
 pub use op::{
     AccessPattern, ErasedPullOp, ErasedState, EvalContext, NodeId, NoopPuller, OpKind, PullOp,
     PullOpAdapter, PullRequest, UpstreamPuller, erase_op,
 };
+pub use validate::{ValidationReport, detect_cycles, validate_graph, validate_subgraph};
